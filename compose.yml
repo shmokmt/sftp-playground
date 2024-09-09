@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  sftp:
+    image: atmoz/sftp
+    ports:
+      - "2222:22"
+    volumes:
+      - ./data:/home/foo/upload
+    command: foo:pass:::upload
